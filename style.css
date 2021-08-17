@@ -15,6 +15,11 @@ body {
   font-size: 1.6rem;
 }
 
+.heading__primary {
+  text-align: center;
+  padding: 4rem;
+}
+
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -24,9 +29,69 @@ body {
   width: 20%;
   height: 15rem;
   border: 1px solid black;
+  position: relative;
+  cursor: pointer;
 }
 
-.heading__primary {
+.project .hover {
+  height: 100%;
+  width: 100%;
+  background-color: #7824f2;
+
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project .title {
+  font-size: 2.1rem;
   text-align: center;
-  padding: 4rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 2rem;
+  background-color: #3b0281;
+  color: #fff;
+  padding: 1rem 2rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  letter-spacing: 1px;
+}
+
+.project .showcase {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 110;
+  background-color: rgba(255, 255, 255, 0.288);
+
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.project.hide .showcase {
+  opacity: 0;
+  z-index: 10;
+}
+
+.showcase .day {
+  padding: 1rem 3rem;
+  background-color: #7824f2;
+  color: #fff;
+  border-bottom-left-radius: 5px;
+
+  display: inline-block;
+  position: absolute;
+  right: 0;
 }
