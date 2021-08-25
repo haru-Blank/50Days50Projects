@@ -1,7 +1,3 @@
-import { darkTheme } from './darktheme';
-
-darkTheme();
-
 const domEL = {
   openBtnEL: document.getElementById('open'),
   openBtnEL: document.getElementById('close'),
