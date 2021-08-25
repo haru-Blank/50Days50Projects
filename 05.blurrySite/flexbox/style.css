@@ -1,0 +1,60 @@
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+
+.flexbox-container {
+  display: flex;
+
+  background-color: papayawhip;
+  border: 3px solid peachpuff;
+
+  /* ! Flex Container Properties */
+  /* /*-  row (default) | column | row-reverse | column-reverse */
+  /* flex-direction: column; */
+
+  /* - flex-start, flex-end, center, space-between, space-around | space-evenlys*/
+  /* justify-content: space-around; */
+
+  /* - center, flex-start, flex-end, baseline  */
+  /* align-items: center; */
+
+  /* - wrap | no-wrap | wrap-reverse */
+  /* flex-wrap: wrap; */
+
+  /* - flex-start, flex-end, center, space-between, space-around | space-evenlys*/
+  /* - think of it as a justify-content for cross-axis */
+  /* align-content: center; */
+}
+
+.flexbox-item-1 {
+  min-height: 100px;
+
+  flex-shrink: 0;
+
+  order: 3;
+}
+
+.flexbox-item-2 {
+  min-height: 200px;
+
+  flex-grow: 1;
+
+  flex-basis: 0;
+
+  align-self: center;
+
+  order: 2;
+}
+
+.flexbox-item-3 {
+  min-height: 300px;
+
+  flex-grow: 1;
+  flex-basis: 0;
+
+  order: 1;
+}

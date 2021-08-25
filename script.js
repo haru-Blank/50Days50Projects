@@ -14,13 +14,13 @@ const PROJECTS = [
   {
     day: '3',
     title: 'Rotating Navigation Animation',
-    link: 'http://www.google.com',
+    link: '/03.rotatingNav/client/index.html',
     image: '/images/3-rotating-navigation-animation.png',
   },
   {
     day: '4',
     title: 'Hidden Search Widget',
-    link: '///',
+    link: '/04.hiddenSearch/index.html',
     image: '/images/4-hidden-search-widget.png',
   },
   {
