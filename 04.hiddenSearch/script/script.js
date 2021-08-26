@@ -84,8 +84,7 @@ class SearchApp {
 
   async init() {
     const countries = await this.fetchData(
-      // 'https://50projects-blank.netlify.app/04.hiddensearch/data/Countries.json'
-      '../data/Countries.json'
+      'https://50projects-blank.netlify.app/04.hiddensearch/data/Countries.json'
     );
     this.countries = countries;
     this.eventHandler();
