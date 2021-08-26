@@ -16,8 +16,7 @@ class SearchApp {
   eventHandler() {
     domEL.buttonEL.addEventListener('click', (e) => {
       e.preventDefault();
-      domEL.inputEL.classLis;
-      t.toggle('show');
+      domEL.inputEL.classList.toggle('show');
     });
 
     domEL.inputEL.addEventListener('input', (e) => {
