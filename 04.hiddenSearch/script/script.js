@@ -22,7 +22,16 @@ class SearchApp {
     domEL.inputEL.addEventListener('input', (e) => {
       this.searchString = e.target.value;
       const filteredCountry = this.filterCountry();
-      this.renderCountry(filteredCountry);
+      console.log(filteredCountry);
+      if (filteredCountry.length > 0) {
+        this.renderCountry(filteredCountry);
+      } else {
+        const pEL = document.createElement('p');
+        pEL.innerText = 'Sorry! The country is in another universe.';
+        pEL.style.fontSize = '2rem';
+        domEL.countriesEL.innerHTML = '';
+        domEL.countriesEL.appendChild(pEL);
+      }
     });
   }
 
@@ -75,7 +84,8 @@ class SearchApp {
 
   async init() {
     const countries = await this.fetchData(
-      'https://50projects-blank.netlify.app/04.hiddensearch/data/Countries.json'
+      // 'https://50projects-blank.netlify.app/04.hiddensearch/data/Countries.json'
+      '../data/Countries.json'
     );
     this.countries = countries;
     this.eventHandler();
