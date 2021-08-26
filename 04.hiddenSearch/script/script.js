@@ -16,7 +16,7 @@ class SearchApp {
   eventHandler() {
     domEL.buttonEL.addEventListener('click', (e) => {
       e.preventDefault();
-      domEL.inputEL.classLis
+      domEL.inputEL.classLis;
       t.toggle('show');
     });
 
@@ -75,7 +75,9 @@ class SearchApp {
   }
 
   async init() {
-    const countries = await this.fetchData('../data/Countries.json');
+    const countries = await this.fetchData(
+      'https://50projects-blank.netlify.app/04.hiddensearch/data/Countries.json'
+    );
     this.countries = countries;
     this.eventHandler();
     this.renderCountry(this.countries);
